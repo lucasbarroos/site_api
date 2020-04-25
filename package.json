@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon src/server.ts",
+    "start": "serve -s build",
     "build": "sucrase ./src -d ./dist --transforms typescript,imports",
     "doc": "apidoc -i ./src -o ./src/doc/",
     "production": "pm2 start ./dist/server.js --watch"
@@ -44,6 +45,7 @@
     "multer": "^1.4.2",
     "nodemailer": "^6.4.6",
     "pm2": "^4.2.3",
+    "serve": "^11.3.0",
     "ts-mongoose-pagination": "^1.1.2",
     "ts-node": "^8.4.1"
   }
