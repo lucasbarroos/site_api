@@ -1,11 +1,14 @@
 import { Router } from 'express'
 // import Auth from './middlewares/Auth'
 import PostController from './controllers/PostController'
+import MessageController from './controllers/MessageController'
 import AttachmentController from './controllers/AttachmentController'
 import multer from 'multer'
 import multerConfig from './config/multer'
 
 const routes = Router()
+
+routes.post('/message', MessageController.store)
 
 routes.post('/post', PostController.store)
 routes.put('/post', PostController.update)
